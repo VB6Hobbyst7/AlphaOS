@@ -2,11 +2,11 @@
 Imports System.Collections.Generic
 Imports System.Text
 
-'   Build 1000
+'   Build 1001
 '   Alpha Pixel Software
-'       Jonathan "Hertz" Heitz
+'       Jonathan "Hertz"
 '       John Paul Rutigliano
-'       (Someone please tell me Zero's real name?!?!?!)
+'       Epiphan Mushahwar (Zero)
 
 Namespace AlphaOS
 
@@ -25,7 +25,7 @@ Namespace AlphaOS
         '   I made this method to parse input for commands and handle them.
         Sub GetCommand()
 
-            Console.Write(User1.Name & ": / (root)>>>")
+            Console.Write(User1.Name & " : (directory unknown)>>>")
             Dim Command As String = Console.ReadLine()
             If Command = "dir" Then
                 Dir()
@@ -40,19 +40,27 @@ Namespace AlphaOS
         '   Called when the 'dir' command is entered into the console.
         Sub Dir()
 
-            Console.WriteLine("The ""Dir"" command is not finished yet.")
+
+
+        End Sub
+
+        '   Called when the 'open' command is entered into the console.
+        Sub Open()
+
+
 
         End Sub
 
         Protected Overrides Sub BeforeRun()
 
-            Console.WriteLine("AlphaOS build 1000 boot success. Welcome.")
+            Console.WriteLine("AlphaOS build 1001 boot success. Welcome.")
             Console.WriteLine("By Alpha Pixel Software, 2017. Made with COSMOS." & vbCrLf)
 
         End Sub
 
         Protected Overrides Sub Run()
 
+            Dim StillRunning As Boolean = True
             Dim UserAccountNotCreated As Boolean = True
             If UserAccountNotCreated Then
 
@@ -91,12 +99,13 @@ GetPassword:
 
             End If
 
-            'Prompt (I know, the listed directory is a constant string, that's because I haven't figured out COSMOS's filesystem functions yet.)
 GetCommand:
             GetCommand()
-            GoTo GetCommand
+            If StillRunning Then
+                GoTo GetCommand
+            End If
 
-            'Infinite loop, so system stays alive (don't technically need this because "GoTo GetCommand" is technically an infinite loop, but meh)
+            '   Infinite loop, so system stays alive
             While True
             End While
 

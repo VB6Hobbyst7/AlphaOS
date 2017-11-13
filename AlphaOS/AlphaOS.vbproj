@@ -13,5 +13,21 @@
     <PackageReference Include="Cosmos.Debug.Kernel" Version="1.0.*" />
     <PackageReference Include="Cosmos.System" Version="1.0.*" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Settings.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Update="Settings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
