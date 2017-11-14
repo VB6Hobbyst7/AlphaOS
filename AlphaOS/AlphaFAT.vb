@@ -16,4 +16,11 @@
 
     End Function
 
+    Public Shared Function ReadFile(FileLocation As String) As String
+
+        Dim FileRead() As String = IO.File.ReadAllLines(FileLocation)
+        Return FileLocation
+
+    End Function
+
 End Class

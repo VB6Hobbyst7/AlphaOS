@@ -41,6 +41,7 @@ Namespace AlphaOS
         '   Called when the 'dir' command is entered into the console.
         Sub DirCmd()
 
+            Console.WriteLine("Files in directory """ & User1.CurrentDir & """:")
             Dim List As String = AlphaFAT.GetFilesInDir(User1.CurrentDir)
 
         End Sub
@@ -50,7 +51,9 @@ Namespace AlphaOS
 
             '   For now, open will just display the contents of a file, not edit it. We need to make a
             '   display driver before we can make an editor.
-
+            Console.Write("Please enter the full path to the file you wish to open: ")
+            Dim Path As String = Console.ReadLine()
+            AlphaFAT.ReadFile(Path)
 
         End Sub
 
