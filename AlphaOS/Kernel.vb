@@ -18,6 +18,7 @@ Namespace AlphaOS
 
             Public Name As String
             Public Password As String
+            Public CurrentDir As String = "/"
 
         End Class
         Public User1 As User
@@ -25,10 +26,10 @@ Namespace AlphaOS
         '   I made this method to parse input for commands and handle them.
         Sub GetCommand()
 
-            Console.Write(User1.Name & " : (directory unknown)>>>")
+            Console.Write(User1.Name & " : " & User1.CurrentDir & " >>>")
             Dim Command As String = Console.ReadLine()
             If Command = "dir" Then
-                Dir()
+                DirCmd()
             ElseIf Command = "help" Then
                 Console.WriteLine("Possible commands:" & vbCrLf & "help: Shows list of commands" & vbCrLf & "dir: displays the files in the current directory")
             Else
@@ -38,20 +39,29 @@ Namespace AlphaOS
         End Sub
 
         '   Called when the 'dir' command is entered into the console.
-        Sub Dir()
+        Sub DirCmd()
 
-
+            Dim List As String = AlphaFAT.GetFilesInDir(User1.CurrentDir)
 
         End Sub
 
         '   Called when the 'open' command is entered into the console.
-        Sub Open()
+        Sub OpenCmd()
 
+            '   For now, open will just display the contents of a file, not edit it. We need to make a
+            '   display driver before we can make an editor.
 
 
         End Sub
 
         Protected Overrides Sub BeforeRun()
+
+            Console.Write("Setting up filesystem...")
+            '   So apparently we need this for FAT32 support:
+            Dim FS = New Cosmos.System.FileSystem.CosmosVFS
+            Cosmos.System.FileSystem.VFS.VFSManager.RegisterVFS(FS)
+            '   (END)
+            Console.WriteLine(" Success!" & vbCrLf)
 
             Console.WriteLine("AlphaOS build 1001 boot success. Welcome.")
             Console.WriteLine("By Alpha Pixel Software, 2017. Made with COSMOS." & vbCrLf)
