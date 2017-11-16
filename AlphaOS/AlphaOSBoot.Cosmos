@@ -27,7 +27,7 @@
     <VMware_VisualStudioDebugPort>Pipe: Cosmos\Serial</VMware_VisualStudioDebugPort>
     <VMware_PxeInterface>10.10.3.225</VMware_PxeInterface>
     <VMware_VMwareEdition>Player</VMware_VMwareEdition>
-    <VMware_OutputPath>bin\Debug\net462\</VMware_OutputPath>
+    <VMware_OutputPath>bin\Debug\net203\</VMware_OutputPath>
     <VMware_EnableGDB>False</VMware_EnableGDB>
     <VMware_StartCosmosGDB>false</VMware_StartCosmosGDB>
     <ISO_Description>Creates a bootable ISO image which can be burned to a DVD. After running the selected project, an explorer window will open containing the ISO file. The ISO file can then be burned to a CD or DVD and used to boot a physical or virtual system.</ISO_Description>
@@ -38,7 +38,7 @@
     <ISO_VisualStudioDebugPort>Pipe: Cosmos\Serial</ISO_VisualStudioDebugPort>
     <ISO_PxeInterface>10.10.3.225</ISO_PxeInterface>
     <ISO_VMwareEdition>Player</ISO_VMwareEdition>
-    <ISO_OutputPath>bin\Debug\net462\</ISO_OutputPath>
+    <ISO_OutputPath>bin\Debug\net203\</ISO_OutputPath>
     <ISO_EnableGDB>False</ISO_EnableGDB>
     <ISO_StartCosmosGDB>false</ISO_StartCosmosGDB>
     <StackCorruptionDetectionEnabled>True</StackCorruptionDetectionEnabled>
@@ -53,9 +53,33 @@
     <IntelEdison_VisualStudioDebugPort>Pipe: Cosmos\Serial</IntelEdison_VisualStudioDebugPort>
     <IntelEdison_PxeInterface>10.10.3.225</IntelEdison_PxeInterface>
     <IntelEdison_VMwareEdition>Player</IntelEdison_VMwareEdition>
-    <IntelEdison_OutputPath>bin\Debug\net462\</IntelEdison_OutputPath>
+    <IntelEdison_OutputPath>bin\Debug\net203\</IntelEdison_OutputPath>
     <IntelEdison_EnableGDB>False</IntelEdison_EnableGDB>
     <IntelEdison_StartCosmosGDB>false</IntelEdison_StartCosmosGDB>
+    <USB_StackCorruptionDetectionEnabled>True</USB_StackCorruptionDetectionEnabled>
+    <USB_Description>Makes a USB device such as a flash drive or external hard disk bootable.</USB_Description>
+    <USB_Deployment>USB</USB_Deployment>
+    <USB_Launch>None</USB_Launch>
+    <USB_DebugEnabled>False</USB_DebugEnabled>
+    <USB_DebugMode>Source</USB_DebugMode>
+    <USB_VisualStudioDebugPort>Pipe: Cosmos\Serial</USB_VisualStudioDebugPort>
+    <USB_PxeInterface>10.10.3.225</USB_PxeInterface>
+    <USB_VMwareEdition>Player</USB_VMwareEdition>
+    <USB_OutputPath>bin\Debug\net203\</USB_OutputPath>
+    <USB_EnableGDB>False</USB_EnableGDB>
+    <USB_StartCosmosGDB>false</USB_StartCosmosGDB>
+    <PXE_StackCorruptionDetectionEnabled>True</PXE_StackCorruptionDetectionEnabled>
+    <PXE_Description>Creates a PXE setup and hosts a DCHP and TFTP server to deploy directly to physical hardware. Allows debugging with a serial cable.</PXE_Description>
+    <PXE_Deployment>PXE</PXE_Deployment>
+    <PXE_Launch>None</PXE_Launch>
+    <PXE_DebugEnabled>True</PXE_DebugEnabled>
+    <PXE_DebugMode>Source</PXE_DebugMode>
+    <PXE_VisualStudioDebugPort>Pipe: Cosmos\Serial</PXE_VisualStudioDebugPort>
+    <PXE_PxeInterface>10.10.3.225</PXE_PxeInterface>
+    <PXE_VMwareEdition>Player</PXE_VMwareEdition>
+    <PXE_OutputPath>bin\Debug\net203\</PXE_OutputPath>
+    <PXE_EnableGDB>False</PXE_EnableGDB>
+    <PXE_StartCosmosGDB>false</PXE_StartCosmosGDB>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="*" />

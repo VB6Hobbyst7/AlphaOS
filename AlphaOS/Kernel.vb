@@ -42,7 +42,7 @@ Namespace AlphaOS
         Sub DirCmd()
 
             Console.WriteLine("Files in directory """ & User1.CurrentDir & """:")
-            Dim List As String = AlphaFAT.GetDirContents(User1.CurrentDir)
+            Dim List As String() = AlphaFAT.GetDirContents(User1.CurrentDir)
             Console.WriteLine(List)
 
         End Sub
